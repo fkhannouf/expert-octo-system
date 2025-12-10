@@ -22,6 +22,12 @@ public partial class Form1 : Form
                 "WebView2 Initialization Error",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Error);
+            
+            // Disable navigation button since WebView2 is not available
+            if (btnLoadUrl != null)
+            {
+                btnLoadUrl.Enabled = false;
+            }
         }
     }
 
